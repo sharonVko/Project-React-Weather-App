@@ -38,17 +38,17 @@ useEffect(() => {
 
   //? show weather matching icons 
   const getWeatherIcon = (iconCode: string) => { switch(iconCode) { 
-    case '01d': return 'public/weather-icons/sun.gif'; 
-    case '01n': return 'public/weather-icons/night.gif'; 
-    case '02d': case '02n': return 'public/weather-icons/cloudy.gif';
-     case '03d': case '03n': return 'public/weather-icons/cloudy.gif';
-      case '04d': case '04n': return 'public/weather-icons/cloudy.gif';
-       case '09d': case '09n': return 'public/weather-icons/rain.gif'; 
-       case '10d': case '10n': return 'public/weather-icons/rain.gif'; 
-       case '11d': case '11n': return 'public/weather-icons/storm.gif'; 
-       case '13d': case '13n': return 'public/weather-icons/snow.gif'; 
-       case '50d': case '50n': return 'public/weather-icons/foggy.gif'; 
-       default: return 'public/weather-icons/whirlwind.gif'; } };
+    case '01d': return '/weather-icons/sun.gif'; 
+    case '01n': return '/weather-icons/night.gif'; 
+    case '02d': case '02n': return '/weather-icons/cloudy.gif';
+     case '03d': case '03n': return '/weather-icons/cloudy.gif';
+      case '04d': case '04n': return '/weather-icons/cloudy.gif';
+       case '09d': case '09n': return '/weather-icons/rain.gif'; 
+       case '10d': case '10n': return '/weather-icons/rain.gif'; 
+       case '11d': case '11n': return '/weather-icons/storm.gif'; 
+       case '13d': case '13n': return '/weather-icons/snow.gif'; 
+       case '50d': case '50n': return '/weather-icons/foggy.gif'; 
+       default: return '/weather-icons/whirlwind.gif'; } };
 
   //-  sun-status
   const formatTime = (timestamp: number) => {
@@ -71,7 +71,7 @@ useEffect(() => {
       {!weatherData && (
         <div className='temperature-display'>
           <h1 className="fall-and-bounce">Daily Weather Forecast</h1>
-          <img className='weather-icon' src="/src/assets/weather-icons/sun-startview.gif" alt="🌈" />
+          <img className='weather-icon' src="/weather-icons/sun-startview.gif" alt="🌈" />
         </div>
       )}
 
