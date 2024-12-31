@@ -14,6 +14,8 @@ function App() {
 const[searchInput, setSearchInput] = useState<string>("")
 const[location, setLocation] = useState<ILocation | null>(null)
 const[weatherData, setWeatherData] = useState<IWeather | null>(null)
+//test sunset mode
+const [isSunset, setIsSunset] = useState<boolean>(false);
   
 const getLocation = () => {
   fetch (`https://api.openweathermap.org/geo/1.0/direct?q=${searchInput}&appid=${apiKey}`)
@@ -30,11 +32,20 @@ useEffect(() => {
    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${location.lat}&lon=${location.lon}&appid=${apiKey}&units=metric`)
 
    .then(response => response.json())
-   .then((data:IWeather )=> setWeatherData(data))
+   .then((data:IWeather ) => {setWeatherData(data);
+    checkSunset(data);
+  })
+  
   /* console.log(location); */
 }
 }, [location])
   console.log(weatherData);
+
+  //test nightmode
+  useEffect(() => { if (weatherData) { checkSunset(weatherData); // Überprüfen, ob Sonnenuntergang stattfindet
+     } }, [weatherData]);
+     useEffect(() => { document.body.className = isSunset ? 'sunset-mode' : ''; // Wechseln der Klasse mit dem ternären Operator
+       }, [isSunset]);
 
   //? show weather matching icons 
   const getWeatherIcon = (iconCode: string) => { switch(iconCode) { 
@@ -58,9 +69,13 @@ useEffect(() => {
     const minutes = date.getMinutes().toString().padStart(2, '0');
     return `${hours}:${minutes}`;
   }
+
+  //? test sunset mode
+  const checkSunset = (data: IWeather) => { const sunsetTime = new Date(data.sys.sunset * 1000).getHours(); const currentTime = new Date().getHours(); if (currentTime >= sunsetTime - 1 && currentTime <= sunsetTime + 1) { setIsSunset(true); } else { setIsSunset(false); } };
   
   return (
     <>
+    <div className={isSunset ? 'sunset-mode' : ''}>
     <section className='seach-bar'>
      <input type="text" name="" id="" placeholder='Please enter a city' value={searchInput} onChange={(event: React.ChangeEvent<HTMLInputElement>)=> setSearchInput(event?.target.value)}/>
      <button type="button" onClick={getLocation}>Search</button>
@@ -105,6 +120,7 @@ useEffect(() => {
      </article>
      )}
      </section>
+     </div>
     </>
   )
 }

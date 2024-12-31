@@ -6,7 +6,7 @@
 
 html, body { 
   height: 100%; 
-  overflow: hidden; /* Verhindert Scrollen */ 
+  overflow: hidden; /* avoids scrolling */ 
 }
 body{
   background-color: #91d1f8;
@@ -91,9 +91,9 @@ button{
   font-size: 6rem;
 }
 .weather-icon { 
-  width: 250px; /* Anpassung der Breite für ein kleineres Icon */
+  width: 250px; 
   /* width: 350px;  */
-  height: auto; /* Höhe wird automatisch skaliert, um das Seitenverhältnis beizubehalten */ 
+  height: auto; /* Höhe wird automatisch skaliert, um Seitenverhältnis beizubehalten */ 
   margin-left: 10px; 
 }
 
@@ -110,44 +110,7 @@ button{
   padding: 6px;
 }
 
-/* test grow effect */
-/* @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-30px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-}
-
-.bounce {
-  display: inline-block;
-  animation: bounce 2s infinite;
-} */
-
-/* test grow */
-/* @keyframes grow {
-  0% {
-    transform: scale(0);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-.grow {
-  display: inline-block;
-  animation: grow 1s ease-out forwards;
-}
-
-.weather-card__wrapper.grow-wrapper {
-  animation: grow 1s ease-out forwards;
-}
- */
-
+/* start view headline bounce effect */
  @keyframes fallAndBounce { 
   0% { transform: translateY(0);
    } 
@@ -166,3 +129,35 @@ button{
     transform: translateX(-50%); 
     display: inline-block; 
     animation: fallAndBounce 4s ease-out infinite; }
+
+    /* nightsky sunset mode */
+
+    .sunset-mode .seach-bar {
+      background-color: rgb(111, 2, 111);
+    }
+
+     .sunset-mode h1, .sunset-mode p, .sunset-mode input::placeholder {
+      color: rgb(73, 6, 112); 
+    }
+    
+    .sunset-mode .weather-card {
+      background-color: white; 
+      border-color: rgb(94, 7, 144); 
+    }
+    
+    .sunset-mode input {
+      background-color: #95a5a6; 
+      border-color: #7f8c8d; 
+    }
+    
+    .sunset-mode button {
+      background-color: #7f8c8d; 
+      border-color: #95a5a6; 
+    }
+    body.sunset-mode { 
+      background-color: #0f0418;
+   }
+
+    .sunset-mode .weather-card__wrapper { 
+      background-image: url('/public/weather-icons/nightsky.png'); 
+      border-color: rgb(94, 7, 144) }
