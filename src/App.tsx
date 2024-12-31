@@ -38,17 +38,17 @@ useEffect(() => {
 
   //? show weather matching icons 
   const getWeatherIcon = (iconCode: string) => { switch(iconCode) { 
-    case '01d': return '/src/assets/weather-icons/sun.gif'; 
-    case '01n': return '/src/assets/weather-icons/night.gif'; 
-    case '02d': case '02n': return '/src/assets/weather-icons/cloudy.gif';
-     case '03d': case '03n': return '/src/assets/weather-icons/cloudy.gif';
-      case '04d': case '04n': return '/src/assets/weather-icons/cloudy.gif';
-       case '09d': case '09n': return '/src/assets/weather-icons/rain.gif'; 
-       case '10d': case '10n': return '/src/assets/weather-icons/rain.gif'; 
-       case '11d': case '11n': return '/src/assets/weather-icons/storm.gif'; 
-       case '13d': case '13n': return '/src/assets/weather-icons/snow.gif'; 
-       case '50d': case '50n': return '/src/assets/weather-icons/foggy.gif'; 
-       default: return '/src/assets/weather-icons/whirlwind.gif'; } };
+    case '01d': return 'public/weather-icons/sun.gif'; 
+    case '01n': return 'public/weather-icons/night.gif'; 
+    case '02d': case '02n': return 'public/weather-icons/cloudy.gif';
+     case '03d': case '03n': return 'public/weather-icons/cloudy.gif';
+      case '04d': case '04n': return 'public/weather-icons/cloudy.gif';
+       case '09d': case '09n': return 'public/weather-icons/rain.gif'; 
+       case '10d': case '10n': return 'public/weather-icons/rain.gif'; 
+       case '11d': case '11n': return 'public/weather-icons/storm.gif'; 
+       case '13d': case '13n': return 'public/weather-icons/snow.gif'; 
+       case '50d': case '50n': return 'public/weather-icons/foggy.gif'; 
+       default: return 'public/weather-icons/whirlwind.gif'; } };
 
   //-  sun-status
   const formatTime = (timestamp: number) => {
