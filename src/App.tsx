@@ -66,14 +66,14 @@ useEffect(() => {
      <button type="button" onClick={getLocation}>Search</button>
      </section>
     
-    {/* <section className={`weather-card__wrapper ${!weatherData ? 'grow-wrapper' : ''}`}> */}
+    {/* <section className={`weather-card__wrapper ${!weatherData ? 'grow-wrapper' : ''}`}>  */}
     <section className='weather-card__wrapper'>
       {!weatherData && (
         <div className='temperature-display'>
           <h1 className="fall-and-bounce">Daily Weather Forecast</h1>
           <img className='weather-icon' src="/src/assets/weather-icons/sun-startview.gif" alt="🌈" />
         </div>
-      )};
+      )}
 
       {weatherData && (
        <article className='weather-card'>
@@ -95,7 +95,7 @@ useEffect(() => {
        <p>Wind: {weatherData?.wind.speed.toFixed(1)} km/h</p>
        <p>Humidity: {weatherData?.main.humidity} %</p>
        </div>
-       <p>Feels like{weatherData?.main.feels_like.toFixed(0)} c°</p>
+       <p>Feels like {weatherData?.main.feels_like.toFixed(0)} °C</p>
        <div className='sun-status'>
           <p>Sunrise: {weatherData?.sys.sunrise && formatTime(weatherData.sys.sunrise)}</p> 
 
@@ -103,7 +103,7 @@ useEffect(() => {
          
       </div>
      </article>
-     )};
+     )}
      </section>
     </>
   )
