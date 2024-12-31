@@ -4,16 +4,12 @@ import './App.css'
 import ILocation from '../interfaces/ILocation';
 import IWeather from '../interfaces/IWeather';
 
-/* const apiLink = import.meta.env.VITE_API_LINK */
-/* 1. innput feld auslesen ✅ */
-/* 2.onclick bei btn click mithilfe der api lat und long ✅ */
-/* 3. lat und long in einem anderen state speichern , wird getrennt und zuerst gefetchted ✅*/
-/* 4. hauptfetch für wetterdaten */
+
 const apiKey = import.meta.env.VITE_API_KEY
 
 function App() {
 
-console.log(apiKey);
+/* console.log(apiKey); */
 
 const[searchInput, setSearchInput] = useState<string>("")
 const[location, setLocation] = useState<ILocation | null>(null)
@@ -40,7 +36,7 @@ useEffect(() => {
 }, [location])
   console.log(weatherData);
 
-  //? test icons
+  //? show weather matching icons 
   const getWeatherIcon = (iconCode: string) => { switch(iconCode) { 
     case '01d': return '/src/assets/weather-icons/sun.gif'; 
     case '01n': return '/src/assets/weather-icons/night.gif'; 
@@ -54,9 +50,9 @@ useEffect(() => {
        case '50d': case '50n': return '/src/assets/weather-icons/foggy.gif'; 
        default: return '/src/assets/weather-icons/whirlwind.gif'; } };
 
-  //- test day night
+  //-  sun-status
   const formatTime = (timestamp: number) => {
-    // Funktion zum Formatieren der Unix-Zeit. Umwandeln der Zeit in Millisekunden
+    // Function to format Unix-time, concerting to miliseconds
     const date = new Date(timestamp * 1000);
     const hours = date.getHours().toString().padStart(2, '0');
     const minutes = date.getMinutes().toString().padStart(2, '0');
@@ -70,8 +66,16 @@ useEffect(() => {
      <button type="button" onClick={getLocation}>Search</button>
      </section>
     
-      {weatherData && (
+    {/* <section className={`weather-card__wrapper ${!weatherData ? 'grow-wrapper' : ''}`}> */}
     <section className='weather-card__wrapper'>
+      {!weatherData && (
+        <div className='temperature-display'>
+          <h1 className="fall-and-bounce">Daily Weather Forecast</h1>
+          <img className='weather-icon' src="/src/assets/weather-icons/sun-startview.gif" alt="🌈" />
+        </div>
+      )};
+
+      {weatherData && (
        <article className='weather-card'>
           <h1>{location?.name}</h1>
          
@@ -99,8 +103,8 @@ useEffect(() => {
          
       </div>
      </article>
-     </section>
      )};
+     </section>
     </>
   )
 }
