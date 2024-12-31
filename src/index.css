@@ -62,7 +62,7 @@ button{
   border:  1px solid rgb(91, 207, 207) ;
   border-radius: 12px;
   padding: 3vh 10vw;
-  background-image: url(./assets/weather-icons/cartoon-cloud-sky-bg.jpg);
+  background-image: url(/weather-icons/cartoon-cloud-sky-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   min-height: calc(100vh 2vh);
