@@ -6,8 +6,7 @@ Welcome to the Weather App! This project is a simple and colorful weather applic
 
 # Preview
 
-![screenshot](./public/screenPicSunset.png)
-![screensshot](./public/screenPicSunriseMobile.png)
+![screenshot](./public/screenPicSunset.png) ![screensshot](./public/screenPicSunriseMobile.png)
 
 ## Features
 
