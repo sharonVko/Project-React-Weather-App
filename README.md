@@ -2,7 +2,7 @@
 
 ## Intro
 
-Welcome to the Weather App! This project is a simple and colorful weather application that displays the current daily weather for any city. The app is designed to be easy to use and kid-friendly, with animated icons representing different weather conditions.
+Welcome to the Weather App! This project is a simple and colorful weather application that displays the current daily weather for any city in the world. The app is designed to be easy to use and kid-friendly, with animated icons representing different weather conditions.
 
 ## Preview
 
