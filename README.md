@@ -6,7 +6,10 @@ Welcome to the Weather App! This project is a simple and colorful weather applic
 
 # Preview
 
-![screenshot](./public/screenPicSunset.png) ![screensshot](./public/screenPicSunriseMobile.png)
+![screenshot](./public/screenPicSunset.png)
+![screensshot](./public/screenPicSunriseMobile.png)
+
+Or check it out on Netlify : [Project Weather App](https://project-react-weathermen-app.netlify.app/)
 
 ## Features
 
@@ -40,9 +43,11 @@ Welcome to the Weather App! This project is a simple and colorful weather applic
 To set up the project locally, follow these steps:
 
 1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/weather-app.git
-   ```
+
+```bash
+git clone git@github.com:sharonVko/Project-React-Weather-App.git
+```
+
 2. Navigate to the project directory:
 
 ```
