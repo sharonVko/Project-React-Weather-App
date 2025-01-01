@@ -88,10 +88,10 @@ button{
 .temperature-display h2{
   color: navy;
   text-shadow: 2px 2px 4px lightblue;
-  font-size: 6rem;
+  font-size: 4rem;
 }
 .weather-icon { 
-  width: 250px; 
+  width: 240px; 
   /* width: 350px;  */
   height: auto; /* automatic scale, to keep aspect ratio */ 
   margin-left: 10px; 
@@ -171,6 +171,7 @@ button{
   .wind span, .feels-like span, .sun-status span{
     font-weight: 700;
     color: rgb(91, 207, 207);
+    text-shadow: 1px 1px 2px navy;
   }
 
 
