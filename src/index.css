@@ -125,10 +125,12 @@ button{
   .fall-and-bounce { 
     position: absolute; 
     top: 0; 
-    left: 50%; 
-    transform: translateX(-50%); 
+    left: 16%; 
+    transform: translateX(-60%); 
     display: inline-block; 
-    animation: fallAndBounce 4s ease-out infinite; }
+    animation: fallAndBounce 4s ease-out infinite;
+    text-align: center;
+   }
 
     /* nightsky sunset mode */
 
@@ -162,11 +164,65 @@ button{
       background-image: url('/public/weather-icons/nightsky.png'); 
       border-color: rgb(94, 7, 144) }
 
-  .wind p, .sun-status p{
+  .wind p, .feels-like , .sun-status p{
     font-weight: 600;
     padding: 4px 8px;
   }
-  .wind span, .sun-status span{
+  .wind span, .feels-like span, .sun-status span{
     font-weight: 700;
     color: rgb(91, 207, 207);
   }
+
+
+  /* Media Queries  iPhone 14 & similar devices */ 
+  @media (max-width: 932px) { 
+  h1{ 
+      font-size: 3rem; margin: 0;
+      text-align: center;
+    }
+
+  .seach-bar{ 
+      margin: 2vh 5vw;
+      padding: 2vh;
+    } 
+
+  button { 
+      padding: 8px 14px;
+      margin-left: 6px;
+      margin-top: 10px; 
+    } 
+
+  .weather-card__wrapper {
+      padding: 2vh 5vw;
+    } 
+    
+  .weather-card { 
+      padding: 2vh 4vw;
+    } 
+
+  .temperature-display h2 {
+     font-size: 3.6rem;
+    } 
+
+  .weather-icon {
+     width: 140px;
+     margin-left: 5px;
+    } 
+
+  .info { 
+      font-size: 1.6rem;
+      padding: 10px 0;
+    } 
+
+  .wind, .sun-status {
+     padding: 4px;
+    }
+
+  .wind p, .feels-like , .feels-like span, .sun-status p{
+    font-size: 0.9rem;
+  } 
+  
+  .fall-and-bounce {
+     font-size: 2rem;
+ } 
+}
