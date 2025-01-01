@@ -130,13 +130,13 @@ function App() {
               ))}
             </div>
             <div className='wind'>
-              <p>Wind: {weatherData?.wind.speed.toFixed(1)} km/h</p>
-              <p>Humidity: {weatherData?.main.humidity} %</p>
+              <p> <span> Wind: </span> {weatherData?.wind.speed.toFixed(1)} km/h</p>
+              <p> <span> Humidity: </span> {weatherData?.main.humidity} %</p>
             </div>
-            <p>Feels like {weatherData?.main.feels_like.toFixed(0)} °C</p>
+            <p> <span> Feels like: </span> {weatherData?.main.feels_like.toFixed(0)} °C</p>
             <div className='sun-status'>
-              <p>Sunrise: {weatherData?.sys.sunrise && formatTime(weatherData.sys.sunrise)}</p>
-              <p>Sunset: {weatherData?.sys.sunset && formatTime(weatherData.sys.sunset)}</p>
+              <p> <span> Sunrise: </span>{weatherData?.sys.sunrise && formatTime(weatherData.sys.sunrise)}</p>
+              <p> <span> Sunset: </span> {weatherData?.sys.sunset && formatTime(weatherData.sys.sunset)}</p>
             </div>
           </article>
         )}

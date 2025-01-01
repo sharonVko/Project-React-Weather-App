@@ -93,7 +93,7 @@ button{
 .weather-icon { 
   width: 250px; 
   /* width: 350px;  */
-  height: auto; /* Höhe wird automatisch skaliert, um Seitenverhältnis beizubehalten */ 
+  height: auto; /* automatic scale, to keep aspect ratio */ 
   margin-left: 10px; 
 }
 
@@ -161,3 +161,12 @@ button{
     .sunset-mode .weather-card__wrapper { 
       background-image: url('/public/weather-icons/nightsky.png'); 
       border-color: rgb(94, 7, 144) }
+
+  .wind p, .sun-status p{
+    font-weight: 600;
+    padding: 4px 8px;
+  }
+  .wind span, .sun-status span{
+    font-weight: 700;
+    color: rgb(91, 207, 207);
+  }
