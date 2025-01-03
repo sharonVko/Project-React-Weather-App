@@ -4,9 +4,15 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: "Outfit";
+  src: url("/public/fonts/Outfit-VariableFont_wght.ttf");
+}
+
 html, body { 
   height: 100%; 
   overflow: hidden; /* avoids scrolling */ 
+  font-family: Outfit;
 }
 body{
   background-color: #91d1f8;
@@ -17,13 +23,16 @@ h1{
   color: rgb(91, 207, 207);
   font-size: 5.6rem;
   text-shadow: 2px 2px 4px navy;
+  font-weight: bold 800;
 }
 
 
 p{
   color: navy;
   font-size: 1.2rem;
+  font-weight: light 200;
 }
+
 img{
   max-width: 100%;
 }
@@ -73,9 +82,9 @@ button{
   border-radius: 12px;
   padding: 4vh 8vw;
   background-color: white;
-  /* hinzugefügt */
   max-width: 600px;  
-  text-align: center; overflow: hidden; 
+  text-align: center;
+  overflow: hidden; 
   margin: 0 auto;
 }
 
@@ -98,7 +107,7 @@ button{
 }
 
 .info{
-  font-size: 1.8rem;
+  font-size: 2.2rem;
   color: rgb(91, 207, 207);
   text-shadow: 1px 1px 2px navy;
 }
@@ -106,8 +115,21 @@ button{
 .wind , .sun-status{
   display: flex;
   gap: 10px;
-  justify-content: center;
+  /* justify-content: center; */
+  justify-content: space-between;
   padding: 6px;
+}
+
+.wind p, .feels-like , .sun-status p{
+  font-weight: 600;
+  padding: 4px 8px;
+}
+.wind span, .feels-like span, .sun-status span{
+  font-weight: 300;
+  font-size: 1.4rem;
+  color: rgb(91, 207, 207);
+  text-shadow: 1px 1px 2px navy;
+  margin-right: 4px;
 }
 
 /* start view headline bounce effect */
@@ -148,31 +170,25 @@ button{
     }
     
     .sunset-mode input {
-      background-color: #95a5a6; 
-      border-color: #7f8c8d; 
+      background-color: #b2a3b2;
+      border-color: navy; 
     }
     
     .sunset-mode button {
-      background-color: #7f8c8d; 
-      border-color: #95a5a6; 
+      background-color: #ab82ab ;
+      border-color: navy;
     }
     body.sunset-mode { 
       background-color: #0f0418;
    }
 
+   .sunset-mode .info , .sunset-mode span{
+    color: navy;
+    text-shadow: 1px 1px 2px  rgb(91, 207, 207);
+   }
     .sunset-mode .weather-card__wrapper { 
       background-image: url('/public/weather-icons/nightsky.png'); 
       border-color: rgb(94, 7, 144) }
-
-  .wind p, .feels-like , .sun-status p{
-    font-weight: 600;
-    padding: 4px 8px;
-  }
-  .wind span, .feels-like span, .sun-status span{
-    font-weight: 700;
-    color: rgb(91, 207, 207);
-    text-shadow: 1px 1px 2px navy;
-  }
 
 
   /* Media Queries  iPhone 14 & similar devices */ 
@@ -211,7 +227,7 @@ button{
     } 
 
   .info { 
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       padding: 10px 0;
     } 
 
@@ -219,8 +235,8 @@ button{
      padding: 4px;
     }
 
-  .wind p, .feels-like , .feels-like span, .sun-status p{
-    font-size: 0.9rem;
+  .wind p, .wind span, .feels-like p , .feels-like span, .sun-status p, .sun-status span{
+    font-size: 1.1rem;
   } 
   
   .fall-and-bounce {
