@@ -6,8 +6,8 @@ Welcome to the Weather App! This project is a simple and colorful weather applic
 
 ## Preview
 
-![screenshot](./public/screenPicSunset.png)
-![screensshot](./public/screenPicSunriseMobile.png)
+![screenshot](./public/desktopScreenPicSunset.png)
+![screensshot](./public/mobileScreenPicSunrise.png)
 
 ### Or check it out on Netlify : [Project Weather App](https://project-react-weathermen-app.netlify.app/)
 
