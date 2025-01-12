@@ -25,7 +25,7 @@ Welcome to the Weather App! This project is a simple and colorful weather applic
 - **TypeScript**
 - **CSS**
 - **HTML**
-- **Weather API**: Data is retrieved from a weather API.
+- **Weather API**: Data is retrieved from a weather API.(https://openweathermap.org/)
 
 ## Design
 
